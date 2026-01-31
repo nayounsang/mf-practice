@@ -1,0 +1,13 @@
+{
+  "name": "mf-practice",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"./packages/host\" --filter \"./packages/remote-whiskey\" dev",
+    "build": "pnpm --recursive --filter \"./packages/*\" build"
+  },
+  "devDependencies": {
+    "pnpm": "^8.0.0"
+  },
+  "packageManager": "pnpm@9.14.0"
+}
