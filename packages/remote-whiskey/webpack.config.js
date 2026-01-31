@@ -2,7 +2,6 @@ const path = require('path');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const PUBLIC_PATH = process.env.PUBLIC_PATH || '/';
 
 module.exports = {
   mode: isProduction ? 'production' : 'development',
@@ -17,7 +16,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     clean: true,
-    publicPath: PUBLIC_PATH,
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],

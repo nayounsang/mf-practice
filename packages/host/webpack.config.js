@@ -4,7 +4,6 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 
 const isProduction = process.env.NODE_ENV === 'production';
 const REMOTE_WHISKEY_URL = process.env.REMOTE_WHISKEY_URL || 'http://localhost:3001/remoteEntry.js';
-const PUBLIC_PATH = process.env.PUBLIC_PATH || '/';
 
 module.exports = {
   mode: isProduction ? 'production' : 'development',
@@ -20,7 +19,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     clean: true,
-    publicPath: PUBLIC_PATH,
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
