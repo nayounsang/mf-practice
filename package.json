@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "pnpm --parallel --filter \"./packages/host\" --filter \"./packages/remote-whiskey\" dev",
-    "build": "pnpm --recursive --filter \"./packages/*\" build"
+    "build": "pnpm --recursive --filter \"./packages/*\" build",
+    "build:host": "pnpm --filter \"./packages/host\" build",
+    "build:whiskey": "pnpm --filter \"./packages/remote-whiskey\" build",
+    "build:all": "pnpm --recursive --filter \"./packages/*\" build"
   },
   "devDependencies": {
     "pnpm": "^8.0.0"
